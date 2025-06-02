@@ -1,0 +1,878 @@
+  /* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+
+  html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+    scroll-padding-top: 2.50rem;
+    background-color: #FAE7FB;
+
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    flex-grow: 1;
+    flex-basis: 200px;
+  }
+  
+  /* Navigation bar styles */
+  .navbar {
+    position: fixed; /* Keeps the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.0837);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    background-color: rgba(135, 132, 202, 0.567);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+  
+    
+  }
+  
+  .nav-links a:hover {
+  background-color: #7869ffa3;
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  transform: scale(1.2);
+  box-shadow: #7869ffa3 0px 7px 29px 0px;
+  border: none;
+  border: 1px solid #FAE7FB;
+    
+  }
+  
+  /* Container styling */
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input field styling */
+.search-txt {
+  position: absolute;
+  left: 10px;
+  width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0;
+  color: #000000;
+  background: none;
+  font-size: 16px;
+  transition: width 0.4s ease-in-out;
+  z-index: 1;
+  opacity: 0;
+}
+
+/* Search button styling */
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.search-btn:hover {
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  background-color: #fff;
+  color: #000;
+}
+
+.search-btn img.search-icon {
+  width: 20px; /* Adjust the size as needed */
+  height: 20px;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-btn:hover img.search-icon {
+  transform: scale(1.2); /* Slight zoom-in effect on hover */
+}
+
+
+/* Hover effect for the entire search box */
+.search-box:hover {
+  width: 300px;
+  border-radius: 25px;
+  background-color: #ffffff;
+}
+
+.search-box:hover .search-txt {
+  width: 240px;
+  padding: 10px;
+  opacity: 1;
+}
+
+.search-box:hover .search-btn {
+  background-color: #36bbf0;
+}
+
+
+  /* Header styles */
+.header {
+  width: 100%;
+  height: 100%;
+  background-position: center bottom; /* Ensures better focus on background images */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 75px;
+  color: #1a3490;
+  flex-direction: column;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3); /* Adds a dark overlay for text visibility */
+  animation: change 20s infinite ease-in-out;
+  margin-bottom: 25px;
+}
+
+@keyframes change {
+  0% {
+    background-image: url('image/hbg01.jpg');
+  }
+  25% {
+    background-image: url('image/hbg02.png');
+  }
+  50% {
+    background-image: url('image/hbg03.jpg');
+  }
+  75% {
+    background-image: url('image/hbg04.jpg');
+  }
+  100% {
+    background-image: url('image/hbg01.jpg');
+  }
+}
+
+.header h1 {
+  font-size: 4.5rem;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.header h3 {
+  font-size: 2.0rem;
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.0;
+  font-style: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #191445; /* Dark background for contrast */
+  color: #ffffff; /* White text for readability */
+  padding: 20px 0; /* Vertical spacing */
+  text-align: center; /* Center the content */
+  font-size: 16px;
+  width: 100%;
+  position: relative; /* Ensures proper positioning */
+  bottom: 0;
+}
+
+.footer .row {
+  margin: 10px 0; /* Spacing between rows */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center content for better alignment */
+}
+
+.footer a {
+  color: #ffffff; /* White text for better contrast */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.footer a:hover {
+  color: #7869ff; /* Light purple for hover effect */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
+
+section.Health_Profile_Form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1.title {
+  font-size: 24px;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #34495e;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p.p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+/* Form Elements */
+form.Health_Profile {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  color: #34495e;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  background-color: #ecf0f1;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+button.Generate {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.Generate:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section.Health_Profile_Form {
+      margin: 20px;
+      padding: 15px;
+  }
+
+  h1.title {
+      font-size: 20px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  label {
+      font-size: 12px;
+  }
+
+  input[type="text"], select {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  button.Generate {
+      font-size: 14px;
+      padding: 10px 15px;
+  }
+}
+
+/* General Warning Style */
+.warning {
+  color: #dc3545;
+  background-color: #f8d7da;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Nutrition Facts */
+.nutrition-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.nutrition-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.nutrition-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Food Summary Section */
+.food-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background:rgba(255, 255, 255, 0);
+  border-radius: 12px;
+  padding: 2rem;
+  align-items: start;
+}
+
+.food-summary .card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 3.5rem;
+  box-shadow: 0 2px 10px #7869ffa3;
+  border: 3px solid #7869ffa3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  max-width: 50%;
+  margin-left: 25%;
+}
+
+.food-summary .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.food-summary h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.food-summary p {
+  margin: 0.8rem 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.food-summary p strong {
+  color: #34495e;
+  font-weight: 600;
+}
+
+.warnings {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #eee;
+}
+
+.warnings h3 {
+  color: #d9534f;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.warning {
+  background-color: #fef3f3;
+  border-left: 4px solid #d9534f;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.suitability-badge {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px #7869ffa3;
+  border: 3px solid #7869ffa3;}
+
+.suitability-badge h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.rating {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  min-width: 150px;
+}
+
+#suitabilityChart {
+  max-height: 200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .food-summary {
+      grid-template-columns: 1fr;
+  }
+
+  .suitability-badge {
+      order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-summary {
+      padding: 1rem;
+  }
+
+  .food-summary h2 {
+      font-size: 1.5rem;
+  }
+
+  .rating {
+      font-size: 1.2rem;
+  }
+}
+
+/* Nutritional Information */
+.nutritional-info {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: #ffffff00;
+  border-radius: 12px;
+}
+
+.nutritional-info h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.nutritional-info h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}
+
+.nutrition-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.nutrition-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 10px #7869ffa3;
+
+}
+
+.nutrition-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border: 3px solid #7869ffa3;
+}
+
+.nutrition-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.nutrition-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0.3rem 0;
+  line-height: 1;
+}
+
+.nutrition-unit {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.nutrition-card:nth-child(1) {
+  background: #fff8f1;
+  border-color: #ffe8cc;
+}
+
+.nutrition-card:nth-child(2) {
+  background: #fff5f5;
+  border-color: #ffd6d6;
+}
+
+.nutrition-card:nth-child(3) {
+  background: #fff9f2;
+  border-color: #ffebcc;
+}
+
+@media (max-width: 768px) {
+  .nutrition-facts {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+  }
+
+  .nutrition-value {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nutrition-facts {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nutrition-card {
+      padding: 1rem;
+  }
+
+  .nutritional-info {
+      padding: 1rem;
+  }
+}
+
+/* Ingredients & Allergens */
+.ingredients-allergens {
+  margin: 2.5rem 0;
+  padding: 0 1rem;
+}
+
+.ingredients-allergens .card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin: 0 auto;
+  max-width: 750px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e9ecef;
+}
+
+.ingredients-allergens h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.ingredients-allergens h3:first-child {
+  margin-top: 0;
+}
+
+.ingredients-allergens h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+.ingredients-allergens p {
+  color: #495057;
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  padding: 0.8rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #3498db;
+}
+
+.ingredients-allergens h3:nth-child(3) {
+  color: #d63031;
+}
+
+.ingredients-allergens h3:nth-child(3)::before {
+  background-color: #d63031;
+}
+
+.ingredients-allergens p:nth-of-type(2) {
+  border-left-color: #d63031;
+  background-color: #fff5f5;
+}
+
+@media (max-width: 768px) {
+  .ingredients-allergens .card {
+      padding: 1.5rem;
+  }
+
+  .ingredients-allergens h3 {
+      font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ingredients-allergens {
+      padding: 0;
+  }
+
+  .ingredients-allergens .card {
+      padding: 1.2rem;
+      border-radius: 8px;
+  }
+
+  .ingredients-allergens p {
+      padding: 0.6rem;
+  }
+}
+
+/* Recommendations */
+.recommendations {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.recommendations h2 {
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.recommendations > p {
+  color: #7f8c8d;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.recommendation-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.recommendation-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.recommendation-card h4 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.recommendation-card p {
+  color: #6c757d;
+  margin: 0.5rem 0 1.2rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.match-meter {
+  height: 24px;
+  background: #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.match-bar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: width 0.6s ease;
+  padding-right: 10px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+#recommendationChart {
+  max-height: 300px;
+  margin: 0 auto;
+  width: 100% !important;
+}
+
+.recommendation-list > p {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #6c757d;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .recommendations {
+      padding: 1.5rem;
+  }
+
+  .recommendation-list {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendations {
+      padding: 1.2rem;
+  }
+
+  .recommendation-list {
+      grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+      padding: 1.2rem;
+  }
+
+  #recommendationChart {
+      max-height: 250px;
+  }
+}

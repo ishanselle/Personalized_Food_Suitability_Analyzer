@@ -1,0 +1,2 @@
+# Personalized Food Suitability Analyzer
+Personalized Food Suitability Analyzer is a web-based system that helps users make healthier food choices based on their personal health profile. It uses a combination of Python, PHP, MySQL, HTML, CSS, and JavaScript, along with data from the Open Food Facts API, to analyze food items and provide real-time dietary recommendations. The system supports features like login, health profile form, food analysis, and personalized health reports.

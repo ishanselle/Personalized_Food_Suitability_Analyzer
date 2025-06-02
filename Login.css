@@ -1,0 +1,287 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('image/hbg04.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: cover;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    flex-grow: 1;
+    flex-basis: 200px;
+  }
+/* Login Form Section */
+.Login_Form {
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #7869ffa3;
+    border: 1px solid #7869ffa3;
+    width: 350px;
+    text-align: center;
+}
+
+/* Logo */
+.Login_Form .l_logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(10px 10px 10px #7869ffa3);
+}
+
+/* Heading */
+.Login_Form h1 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.Login_Form p {
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.Login_Form label {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.Login_Form input[type="text"],
+.Login_Form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus Effects */
+.Login_Form input:focus {
+    outline: none;
+    border-color: #7869ff;
+    box-shadow: 0 0 5px #7869ffa3;
+}
+
+/* Checkbox */
+.Login_Form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Buttons */
+.Login_Form .Login_FormB {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effects */
+.Login_Form .Login_FormB:hover {
+    background-color: #0f5fbf;
+    transform: scale(1.05);
+}
+
+/* Reset Button Specific Styles */
+.Login_Form button[type="reset"] {
+    background-color: #e74c3c;
+}
+
+.Login_Form button[type="reset"]:hover {
+    background-color: #c0392b;
+}
+
+/* Links */
+.Login_Form a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Login_Form a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .Login_Form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .Login_Form h1 {
+        font-size: 1.8rem;
+    }
+
+    .Login_Form .Login_FormB {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Sign-up Form Section */
+.Sign_up {
+    backdrop-filter: blur(30px);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #7869ffa3;
+    border: 1px solid #7869ffa3;
+    width: 400px;
+    text-align: center;
+}
+
+/* Logo */
+.Sign_up .l_logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Heading */
+.Sign_up h1 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.Sign_up p {
+    font-size: 1rem;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Labels */
+.Sign_up label {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.Sign_up input[type="text"],
+.Sign_up input[type="email"],
+.Sign_up input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus Effects */
+.Sign_up input:focus {
+    outline: none;
+    border-color: #7869ff;
+    box-shadow: 0 0 5px #7869ffa3;
+}
+
+/* Checkbox */
+.Sign_up input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Buttons */
+.Sign_up .Sign_upB {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effects */
+.Sign_up .Sign_upB:hover {
+    background-color: #0f5fbf;
+    transform: scale(1.05);
+}
+
+/* Reset Button Specific Styles */
+.Sign_up button[type="reset"] {
+    background-color: #e74c3c;
+}
+
+.Sign_up button[type="reset"]:hover {
+    background-color: #c0392b;
+}
+
+/* Show Password Button */
+.Sign_up button[type="button"] {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.Sign_up button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* Links */
+.Sign_up a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Sign_up a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .Sign_up {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .Sign_up h1 {
+        font-size: 1.8rem;
+    }
+
+    .Sign_up .Sign_upB {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

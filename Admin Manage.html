@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home - Personalized Food Suitability Analyzer</title>
+    <link rel="stylesheet" href="Admin_Home.css">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">
+      <img src="image/log3.png" alt="Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="Admin_Home.php">Food Management</a></li>
+      <li><a href="Admin Manage.html">Admin Manage</a></li>
+      <li><a href="Admin_logout.php">Log Out</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" class="search-txt" name="" placeholder="What's on your mind?"/>
+      <a href="#" class="search-btn">
+        <img src="image/search .png" alt="Search Icon" class="search-icon" />
+      </a>
+    </div>
+  </nav>
+  <header class="header">
+    <br><br>
+  <h1 class="h1">Welcome, Admin!</h1>
+  <p>
+    Use the navigation menu to manage the application.
+  </p><br><br>
+</header>
+<section class="Admin">
+    <h1>Admin Management</h1>
+    <h3>Enter the Admin details</h3>
+    <form id="adminRegistrationForm" action="register_admin.php" method="post">
+        <h2>Admin Registration</h2>
+        
+        <div class="form-group">
+          <label for="full_name">Full Name:</label>
+          <input type="text" id="full_name" name="full_name" maxlength="450" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" maxlength="450" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" maxlength="450" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="8" required>
+          <small>Minimum 8 characters</small>
+          <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility('password')"> Show Password
+        </div>
+        
+        <div class="form-group">
+          <label for="confirm_password">Confirm Password:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required>
+          <input type="checkbox" id="showConfirmPassword" onclick="togglePasswordVisibility('confirm_password')"> Show Password
+        </div>
+
+        <script>
+          function togglePasswordVisibility(fieldId) {
+            const field = document.getElementById(fieldId);
+            field.type = field.type === 'password' ? 'text' : 'password';
+          }
+        </script>
+        
+        <div class="form-actions">
+          <button type="submit">Register Admin</button>
+        </div>
+      </form>
+</section>
+<footer class="footer">
+    <div class="row">
+        <p>
+            <a href="mailto:support@foodsuitability.com">support@foodsuitability.com</a>
+            <br>
+            <a href="tel:+1234567890">+1 234 567 890</a>
+        </p>
+    </div>
+    <div class="row">
+        <p>&copy; 2024 Personalized Food Suitability System. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
